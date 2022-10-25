@@ -52,6 +52,7 @@ resources:
 - argocd/namespace-cpd-instance.yaml
 #- argocd/operatorgroup-openshift-marketplace.yaml
 - argocd/daemonset-sync-global-pullsecret.yaml
+- argocd/namespace-tools.yaml
 
 
 patches:
