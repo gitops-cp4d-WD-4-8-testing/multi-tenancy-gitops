@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-wd-instance
+  annotations:
+    argocd.argoproj.io/sync-wave: "270"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: helm
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cpd-instance
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: instances/ibm-cpd-watson-discovery-instance/cpd-453
+    helm:
+      values: |
+        fileStorageClass: managed-nfs-storage
+        blockStorageClass: ibmc-block-gold
+        cpd-version: 4.5.3
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -7,6 +7,7 @@ resources:
 #- argocd/namespace-staging.yaml
 #- argocd/namespace-prod.yaml
 #- argocd/namespace-cloudpak.yaml
+#- argocd/namespace-cpd-instance.yaml
 #- argocd/namespace-istio-system.yaml
 #- argocd/namespace-openldap.yaml
 #- argocd/namespace-sealed-secrets.yaml
@@ -45,6 +46,14 @@ resources:
 #- argocd/storage.yaml
 #- argocd/infraconfig.yaml
 #- argocd/machinesets.yaml
+
+## Cloud Pak for Data 4.5.3
+#- argocd/namespace-ibm-common-services.yaml
+#- argocd/namespace-cpd-instance.yaml
+#- argocd/operatorgroup-openshift-marketplace.yaml
+#- argocd/daemonset-sync-global-pullsecret.yaml
+
+
 patches:
 - target:
     group: argoproj.io
