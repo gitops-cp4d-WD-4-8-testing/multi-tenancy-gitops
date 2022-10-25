@@ -380,6 +380,8 @@ rules:
     apiGroups:
       - discovery.watson.ibm.com
     resources:
+      - watsondiscoveries
+      - watsondiscovery
       - wd
       - wds
   - verbs:
