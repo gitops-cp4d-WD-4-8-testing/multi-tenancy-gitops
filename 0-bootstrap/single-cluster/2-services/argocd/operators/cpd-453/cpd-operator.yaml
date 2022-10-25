@@ -28,7 +28,7 @@ spec:
       - name: metadata.name
         value: cpd-operator
       - name: spec.channel
-        value: v3.2
+        value: v3.20
       - name: spec.installPlanApproval
         value: Automatic
       - name: spec.name
