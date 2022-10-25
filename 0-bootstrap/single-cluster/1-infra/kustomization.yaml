@@ -48,10 +48,10 @@ resources:
 #- argocd/machinesets.yaml
 
 ## Cloud Pak for Data 4.5.3
-#- argocd/namespace-ibm-common-services.yaml
-#- argocd/namespace-cpd-instance.yaml
+- argocd/namespace-ibm-common-services.yaml
+- argocd/namespace-cpd-instance.yaml
 #- argocd/operatorgroup-openshift-marketplace.yaml
-#- argocd/daemonset-sync-global-pullsecret.yaml
+- argocd/daemonset-sync-global-pullsecret.yaml
 
 
 patches:
