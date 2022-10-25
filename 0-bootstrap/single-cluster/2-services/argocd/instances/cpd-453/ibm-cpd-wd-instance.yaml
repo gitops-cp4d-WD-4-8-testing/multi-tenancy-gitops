@@ -19,8 +19,8 @@ spec:
     path: instances/ibm-cpd-watson-discovery-instance/cpd-453
     helm:
       values: |
-        fileStorageClass: managed-nfs-storage
-        blockStorageClass: ibmc-block-gold
+        fileStorageClass: ocs-storagecluster-cephfs
+        blockStorageClass: ocs-storagecluster-ceph-rbd
         cpdVersion: 4.5.3
   syncPolicy:
     automated:
