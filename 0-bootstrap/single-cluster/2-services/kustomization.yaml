@@ -62,7 +62,7 @@ resources:
 #- NO-NEED-argocd/operators/cpd-453/operand-deployment-lifecycle-manager.yaml
 
 - argocd/instances/cpd-453/ibm-cpd-instance.yaml
-- argocd/instances/cpd-453/ibm-wd-instance.yaml
+- argocd/instances/cpd-453/ibm-cpd-wd-instance.yaml
 
 
 
