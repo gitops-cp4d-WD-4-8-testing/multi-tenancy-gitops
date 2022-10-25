@@ -46,7 +46,7 @@ resources:
 
 ## Cloud Pak for Data 4.5.3 - Watson Discovery
 - argocd/operators/cpd-453/ibm-catalogs.yaml
-#- argocd/operators/cpd-453/ibm-common-service-operator.yaml
+- argocd/operators/cpd-453/ibm-common-service-operator.yaml
 #- argocd/operators/cpd-453/cpd-operator.yaml
 #- argocd/operators/cpd-453/ibm-rabbitmp-operator.yaml
 #- argocd/operators/cpd-453/ibm-cloud-native-postgresql-operator.yaml
