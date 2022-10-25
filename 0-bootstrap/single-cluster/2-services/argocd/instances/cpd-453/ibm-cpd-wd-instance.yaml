@@ -21,7 +21,7 @@ spec:
       values: |
         fileStorageClass: managed-nfs-storage
         blockStorageClass: ibmc-block-gold
-        cpd-version: 4.5.3
+        cpdVersion: 4.5.3
   syncPolicy:
     automated:
       prune: true
