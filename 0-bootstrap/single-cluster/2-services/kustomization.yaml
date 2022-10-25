@@ -44,6 +44,28 @@ resources:
 #- argocd/operators/ibm-cpd-wml-operator.yaml
 #- argocd/instances/ibm-cpd-wml-instance.yaml
 
+## Cloud Pak for Data 4.5.3 - Watson Discovery
+#- argocd/operators/cpd-453/ibm-catalogs.yaml
+#- argocd/operators/cpd-453/ibm-common-service-operator.yaml
+#- argocd/operators/cpd-453/cpd-operator.yaml
+#- argocd/operators/cpd-453/ibm-rabbitmq-operator.yaml
+#- argocd/operators/cpd-453/ibm-cloud-native-postgresql-operator.yaml
+#- argocd/operators/cpd-453/ibm-watson-discovery-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-cert-manager-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-elasticsearch-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-etcd-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-minio-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-model-train-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-namespace-scrope-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-watson-gateway-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/ibm-zen-operator.yaml
+#- NO-NEED-argocd/operators/cpd-453/operand-deployment-lifecycle-manager.yaml
+
+#- argocd/instances/cpd-453/ibm-cpd-instance.yaml
+#- argocd/instances/cpd-453/ibm-cpd-wd-instance.yaml
+
+
+
 ## Cloud Pak for Data Demos
 #- argocd/instances/cp4d-pattern-healthcare.yaml
 
@@ -61,6 +83,7 @@ resources:
 
 ## IBM Catalogs
 #- argocd/operators/ibm-catalogs.yaml
+#- argocd/operators/ibm-catalogs-cpd-453.yaml
 
 # PAW
 #- argocd/instances/ibm-paw.yaml
