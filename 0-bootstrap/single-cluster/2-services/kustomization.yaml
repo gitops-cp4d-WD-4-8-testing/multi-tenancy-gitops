@@ -167,10 +167,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://github.com/jesusmah/multi-tenancy-gitops-services.git
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_SERVICES}
     - op: add
       path: /spec/source/targetRevision
-      value: wd-test-1
+      value: ${GIT_GITOPS_SERVICES_BRANCH}
 - target:
     group: argoproj.io
     kind: Application
@@ -178,10 +178,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://github.com/jesusmah/multi-tenancy-gitops-apps.git
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_APPLICATIONS}
     - op: add
       path: /spec/source/targetRevision
-      value: wd-test-1
+      value: ${GIT_GITOPS_APPLICATIONS_BRANCH}
 - target:
     group: argoproj.io
     kind: Application
@@ -189,7 +189,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://charts.cloudnativetoolkit.dev
+      value: ${HELM_REPOURL}
 - target:
     name: ibm-automation-foundation-operator
   patch: |-

@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     path: 0-bootstrap/others/1-shared-cluster/cluster-n-prod
-    repoURL: https://github.com/jesusmah/multi-tenancy-gitops.git
-    targetRevision: wd-test-1
+    repoURL: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    targetRevision: ${GIT_GITOPS_BRANCH}
   syncPolicy:
     automated:
       prune: true
