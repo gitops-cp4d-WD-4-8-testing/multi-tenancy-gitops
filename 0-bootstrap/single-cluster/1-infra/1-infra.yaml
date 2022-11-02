@@ -66,6 +66,10 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: openshift-image-registry
     server: https://kubernetes.default.svc
+  - namespace: openshift-marketplace
+    server: https://kubernetes.default.svc
+  - namespace: cpd-instance
+    server: https://kubernetes.default.svc
   - namespace: sccm
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:

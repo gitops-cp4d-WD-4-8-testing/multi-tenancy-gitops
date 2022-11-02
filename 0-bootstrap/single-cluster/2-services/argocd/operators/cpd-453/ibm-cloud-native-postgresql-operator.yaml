@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-cloud-native-postgresql-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "240"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: helm
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ibm-common-services
+    server: 'https://kubernetes.default.svc'
+  project: services
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  source:
+    chart: ocp-subscription
+    repoURL: "" # Populated by kustomize patches in 2-services/kustomization.yaml
+    targetRevision: 1.0.0
+    helm:
+      parameters:
+      - name: metadata.name
+        value: ibm-cloud-native-postgresql-operator
+      - name: spec.channel
+        value: stable
+      - name: spec.installPlanApproval
+        value: Automatic
+      - name: spec.name
+        value: cloud-native-postgresql
+      - name: spec.source
+        value: cloud-native-postgresql-catalog
+      - name: spec.sourceNamespace
+        value: openshift-marketplace

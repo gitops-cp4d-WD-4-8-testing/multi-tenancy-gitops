@@ -256,6 +256,9 @@ rules:
       - operator.ibm.com
     resources:
       - commonservices
+      - operandrequests
+      - operandconfigs
+      - operandregistries
   - verbs:
       - '*'
     apiGroups:
@@ -333,12 +336,6 @@ rules:
   - verbs:
       - '*'
     apiGroups:
-      - operator.ibm.com
-    resources:
-      - operandrequests
-  - verbs:
-      - '*'
-    apiGroups:
       - scheduler.spectrumcomputing.ibm.com
     resources:
       - scheduling
@@ -378,6 +375,15 @@ rules:
       - wos.cpd.ibm.com
     resources:
       - woservices
+  - verbs:
+      - '*'
+    apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveries
+      - watsondiscovery
+      - wd
+      - wds
   - verbs:
       - '*'
     apiGroups:
